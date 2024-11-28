@@ -2,7 +2,7 @@
 public class LiveScoreboards {
 
     public static void main(String[] args) {
-        Scoreboard scoreboard = new Scoreboard();
+        //Scoreboard scoreboard = new Scoreboard();
 
         // TODO: Start matches
         //scoreboard.startMatch();
