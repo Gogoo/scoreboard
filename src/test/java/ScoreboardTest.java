@@ -179,7 +179,7 @@ public class ScoreboardTest {
 
         // Validate
         assertNotNull(summary);
-        assertEquals(summary.size(), 2);
+        assertEquals(2, summary.size());
 
         assertEquals(homeTeam2, summary.get(0).getHomeTeam());
         assertEquals(homeScore2, summary.get(0).getHomeScore());

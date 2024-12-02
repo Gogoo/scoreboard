@@ -26,7 +26,7 @@ public class LiveScoreboards {
 
         // Summary
         List<Match> matches = scoreboard.getSummary();
-        System.out.println(matches.stream().map(match -> match.toString()).collect(Collectors.joining("\n")));
+        System.out.println(matches.stream().map(Match::toString).collect(Collectors.joining("\n")));
 
     }
 }

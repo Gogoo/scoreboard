@@ -41,9 +41,8 @@ public class Validator {
     }
 
     private boolean isPlayingRightNow(String team, List<Match> matches) {
-        return matches.stream().filter(match -> match.getHomeTeam().trim().equalsIgnoreCase(team.trim()) ||
-                                                      match.getAwayTeam().trim().equalsIgnoreCase(team.trim())
-                                      ).findFirst().isPresent();
+        return matches.stream().anyMatch(match -> match.getHomeTeam().trim().equalsIgnoreCase(team.trim()) ||
+                                                        match.getAwayTeam().trim().equalsIgnoreCase(team.trim()));
     }
 
     // updating are on bought
@@ -54,10 +53,5 @@ public class Validator {
 
         log.severe("Error: score can't be negative.");
         return false;
-    }
-
-    // score is updating by 1
-    public boolean isValidNewScore(Match match, int newHomeScore, int newAwayScore) {
-        return newHomeScore + newAwayScore - match.getTotalScore() == 1;
     }
 }
