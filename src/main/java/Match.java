@@ -47,4 +47,9 @@ public class Match {
     public int getTotalScore() {
         return homeScore + awayScore;
     }
+
+    @Override
+    public String toString() {
+        return homeTeam + " " + homeScore + " - " + awayTeam + " " + awayScore;
+    }
 }

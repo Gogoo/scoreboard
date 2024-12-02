@@ -155,7 +155,7 @@ public class ScoreboardTest {
     }
 
     @Test
-    public void getSummaryBaseFlow() {
+    public void getSummaryBaseFlow() throws InterruptedException {
         // Initialize
         String homeTeam1 = "homeTeam1";
         String awayTeam1 = "awayTeam1";
@@ -170,7 +170,7 @@ public class ScoreboardTest {
         // Prepare
         scoreboard.startMatch(homeTeam1, awayTeam1);
         scoreboard.updateScore(homeTeam1, awayTeam1, homeScore1, awayScore1);
-
+        Thread.sleep(500L);
         scoreboard.startMatch(homeTeam2, awayTeam2);
         scoreboard.updateScore(homeTeam2, awayTeam2, homeScore2, awayScore2);
 
@@ -191,8 +191,6 @@ public class ScoreboardTest {
         assertEquals(awayTeam1, summary.get(1).getAwayTeam());
         assertEquals(awayScore1, summary.get(1).getAwayScore());
 
-//        System.out.println(summary.stream()
-//                            .map(match -> match.getHomeTeam() +" "+ match.getHomeScore() +" - "+ match.getAwayTeam() +" "+ match.getAwayScore())
-//                            .collect(Collectors.joining("\n")));
+        //System.out.println(summary.stream().map(match -> match.toString()).collect(Collectors.joining("\n")));
     }
 }
