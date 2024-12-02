@@ -48,4 +48,4 @@ For all new functionality need to create feature branch like "feature/feature_na
 ## Source code
 1. Clone the repo:
    ```bash
-   git clone https://github.com/Gogoo/scoreboard.git
+   git clone -b feature/scoreboard --single-branch https://github.com/Gogoo/scoreboard.git
