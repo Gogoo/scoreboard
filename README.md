@@ -7,6 +7,7 @@ Live Football World Cup Scoreboard library shows all the ongoing matches and the
 - [About the Project](#about-the-project)
 - [Technical requirements](#technical-requirements)
 - [Source code](#source-code)
+- [Branches](#branches)
 
 ## About the Project
 
@@ -40,7 +41,11 @@ The summary should be as follows:
 ## Technical requirements
 To build the project you will need Java 11 and Maven build tool.
 
+## Branches
+This is feture branch. 
+For all new functionality need to create feature branch like "feature/feature_name".
+
 ## Source code
 1. Clone the repo:
    ```bash
-   git clone https://github.com/username/project.git
+   git clone https://github.com/Gogoo/scoreboard.git
